@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/02 16:36:51 by user42            #+#    #+#             */
-/*   Updated: 2021/01/02 23:13:50 by user42           ###   ########.fr       */
+/*   Updated: 2021/01/03 10:34:44 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,8 +90,6 @@ int		main(void)
 			search(entries, count);
 		else if (!(exit_command.compare(buf)))
 			break ;
-		else if (buf.size())
-			std::cout<<"Error" <<std::endl<<"Valid commands: [ADD | SEARCH | EXIT]"<<std::endl<<">";
 		else
 			std::cout<<">";
 	}
