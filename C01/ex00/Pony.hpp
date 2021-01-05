@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   Pony.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/02 13:18:14 by user42            #+#    #+#             */
-/*   Updated: 2021/01/05 07:48:46 by user42           ###   ########.fr       */
+/*   Created: 2021/01/04 09:33:15 by user42            #+#    #+#             */
+/*   Updated: 2021/01/04 09:54:28 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#ifndef PONY_HPP
+# define PONY_HPP
 
-# include "ClassContact.hpp"
 # include <iostream>
-# include <iomanip>
+
+class Pony{
+	public:
+		int			size;
+		std::string	name;
+
+		Pony(std::string);
+		~Pony();
+};
 
 #endif

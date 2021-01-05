@@ -6,11 +6,60 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/02 16:36:51 by user42            #+#    #+#             */
-/*   Updated: 2021/01/03 10:34:44 by user42           ###   ########.fr       */
+/*   Updated: 2021/01/05 08:05:07 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phonebook.hpp"
+
+void	add(Contact *entry)
+{
+	std::string buf;
+
+	std::cout<<"First name:";
+	std::getline(std::cin, buf);
+	entry->set_first_name(buf);
+	std::cout<<"Last name:";
+	std::getline(std::cin, buf);
+	entry->set_last_name(buf);
+	std::cout<<"Nickname:";
+	std::getline(std::cin, buf);
+	entry->set_nickname(buf);
+	std::cout<<"Login:";
+	std::getline(std::cin, buf);
+	entry->set_login(buf);
+	std::cout<<"Postal address:";
+	std::getline(std::cin, buf);
+	entry->set_postal_address(buf);
+	std::cout<<"Email address:";
+	std::getline(std::cin, buf);
+	entry->set_email_address(buf);
+	std::cout<<"Phone number:";
+	std::getline(std::cin, buf);
+	entry->set_phone_number(buf);
+	std::cout<<"Birthdate:";
+	std::getline(std::cin, buf);
+	entry->set_birthdate(buf);
+	std::cout<<"Favorite meal:";
+	std::getline(std::cin, buf);
+	entry->set_favorite_meal(buf);
+	std::cout<<"Underwear color:";
+	std::getline(std::cin, buf);
+	entry->set_underwear_color(buf);
+	std::cout<<"Darkest secret:";
+	std::getline(std::cin, buf);
+	entry->set_darkest_secret(buf);
+	std::cout<<std::endl<<"Contact added successfully!"<<std::endl<<">";
+}
+
+void	print_entry_contact_info(Contact *entry)
+{
+	std::cout<< entry->getFirst_name() <<std::endl;
+	std::cout<< entry->getLast_name() <<std::endl;
+	std::cout<< entry->getPostal_address() <<std::endl;
+	std::cout<< entry->getEmail_address() <<std::endl;
+	std::cout<< entry->getPhone_number() <<std::endl;
+}
 
 void	welcome(void)
 {
@@ -53,7 +102,7 @@ void	search(Contact entries[8], int count)
 				break ;
 			else if (buf.size() == 1 && buf[0] > '0' && buf[0] <= ('0' + count))
 			{
-				entries[buf[0] - '0' - 1].print_entry_contact_info();
+				print_entry_contact_info(&entries[buf[0] - '0' - 1]);
 				break ;
 			}
 			else if (buf.size())
@@ -63,6 +112,8 @@ void	search(Contact entries[8], int count)
 	std::cout<<'>';
 	return ;
 }
+
+
 
 int		main(void)
 {
@@ -81,9 +132,9 @@ int		main(void)
 		if (!(add_command.compare(buf)))
 		{
 			if (count >= 8)
-				std::cout<<"We said 'no more than 8 contacts' dude!"<<std::endl;
+				std::cout<<"We said 'no more than 8 contacts' dude!"<<std::endl<<">";
 			else
-				entries[count].add();
+				add(&entries[count]);
 			count++;
 		}
 		else if (!(search_command.compare(buf)))

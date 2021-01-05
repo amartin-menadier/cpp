@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/02 13:18:14 by user42            #+#    #+#             */
-/*   Updated: 2021/01/05 07:48:46 by user42           ###   ########.fr       */
+/*   Created: 2021/01/04 14:19:50 by user42            #+#    #+#             */
+/*   Updated: 2021/01/04 15:08:53 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#include "Zombie.hpp"
+#include "ZombieEvent.hpp"
 
-# include "ClassContact.hpp"
-# include <iostream>
-# include <iomanip>
+int	main(void)
+{
+	Zombie stack_dead_guy = Zombie("Jean-Louis", "stack generation");
 
-#endif
+	ZombieEvent first_byte = ZombieEvent();
+	first_byte.setZombieType("heap generation");
+	Zombie *heap_dead_guy = first_byte.randomChump();
+	delete heap_dead_guy;
+	
+	return (0);
+}

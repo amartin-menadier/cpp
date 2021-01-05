@@ -6,7 +6,7 @@
 #    By: user42 <user42@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/10 18:04:40 by user42            #+#    #+#              #
-#    Updated: 2020/12/10 18:48:05 by user42           ###   ########.fr        #
+#    Updated: 2021/01/05 08:06:22 by user42           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRCS		=	*.cpp
 
 CC			=	clang++
 
-FLAGS		=	-Wall -Wextra -Werror
+FLAGS		=	-Wall -Wextra -Werror -std=c++98
 
 all			:	$(NAME)
 

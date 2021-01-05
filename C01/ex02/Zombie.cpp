@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/02 13:18:14 by user42            #+#    #+#             */
-/*   Updated: 2021/01/05 07:48:46 by user42           ###   ########.fr       */
+/*   Created: 2021/01/04 10:42:39 by user42            #+#    #+#             */
+/*   Updated: 2021/01/04 15:08:18 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#include "Zombie.hpp"
 
-# include "ClassContact.hpp"
-# include <iostream>
-# include <iomanip>
+void	Zombie::announce() const{
+	
+	std::cout	<< "<" << this->name << " (" << this->type << ")"
+				<< "> Braiiinnnss..." <<std::endl;
+}
 
-#endif
+Zombie::Zombie(std::string name, std::string type) : type(type), name(name) 
+{
+	Zombie::announce();
+}
+
+Zombie::~Zombie()
+{
+		std::cout	<< "<" << this->name << " (" << this->type << ")"
+				<< "> DEAD" <<std::endl;
+}

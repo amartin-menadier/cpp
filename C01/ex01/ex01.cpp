@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   ex01.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/02 13:18:14 by user42            #+#    #+#             */
-/*   Updated: 2021/01/05 07:48:46 by user42           ###   ########.fr       */
+/*   Created: 2021/01/04 10:26:37 by user42            #+#    #+#             */
+/*   Updated: 2021/01/04 10:37:51 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#include <iostream>
 
-# include "ClassContact.hpp"
-# include <iostream>
-# include <iomanip>
+void	memoryLeak()
+{
+	std::string* panther = new std::string("String panther");
+	std::cout << *panther << std::endl;
 
-#endif
+	delete panther;
+}
+
+int		main()
+{
+	memoryLeak();
+	return (0);
+}
