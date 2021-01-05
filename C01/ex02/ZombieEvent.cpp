@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 10:47:09 by user42            #+#    #+#             */
-/*   Updated: 2021/01/04 15:09:23 by user42           ###   ########.fr       */
+/*   Updated: 2021/01/05 11:16:05 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,11 @@ void ZombieEvent::setZombieType(std::string given_type)
 
 Zombie *ZombieEvent::newZombie(std::string name)
 {
-	return (new Zombie(name, this->type));
+	Zombie *walkingdead = new Zombie();
+	walkingdead->setname(name);
+	walkingdead->settype(this->type);
+	walkingdead->announce();
+	return (walkingdead);
 }
 
 Zombie *ZombieEvent::randomChump()
@@ -33,5 +37,5 @@ Zombie *ZombieEvent::randomChump()
 	
 	if (this->type == "")
 		this->type = "NoType";
-	return (this->newZombie(names[rand() % 11]));
+	return (newZombie(names[rand() % 11]));
 }

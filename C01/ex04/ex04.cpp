@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   ex04.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/04 10:40:21 by user42            #+#    #+#             */
-/*   Updated: 2021/01/05 21:42:32 by user42           ###   ########.fr       */
+/*   Created: 2021/01/05 13:42:21 by user42            #+#    #+#             */
+/*   Updated: 2021/01/05 13:48:20 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include <iostream>
 
-# include <iostream>
+int		main(void)
+{
+	std::string str = "HI THIS IS BRAIN";
+	std::string *ptr = &str;
+	std::string &ref = str;
 
-class Zombie {
-	public:
-		Zombie();
-		~Zombie();
-		void settype(std::string type);
-		void setname(std::string name);
-		void announce() const;
-	private:
-		std::string type;
-		std::string name;
-};
-
-#endif
+	std::cout << *ptr << std::endl;
+	std::cout << ref << std::endl;
+	return (0);
+}

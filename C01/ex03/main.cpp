@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/04 10:40:21 by user42            #+#    #+#             */
-/*   Updated: 2021/01/05 21:42:32 by user42           ###   ########.fr       */
+/*   Created: 2021/01/05 08:27:49 by user42            #+#    #+#             */
+/*   Updated: 2021/01/05 13:24:05 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "ZombieHorde.hpp"
+#include "Zombie.hpp"
 
-# include <iostream>
+int		main(void)
+{
+	std::cout<<"That's the end of the world!"<<std::endl;
 
-class Zombie {
-	public:
-		Zombie();
-		~Zombie();
-		void settype(std::string type);
-		void setname(std::string name);
-		void announce() const;
-	private:
-		std::string type;
-		std::string name;
-};
+	ZombieHorde *sras = new ZombieHorde(3, "first generation");
+	sras->announce();
 
-#endif
+	ZombieHorde *covid19 = new ZombieHorde(7, "second generation");
+	covid19->announce();
+
+	delete sras;
+	delete covid19;
+	return (EXIT_SUCCESS);
+}

@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   ZombieHorde.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/04 10:40:21 by user42            #+#    #+#             */
-/*   Updated: 2021/01/05 21:42:32 by user42           ###   ########.fr       */
+/*   Created: 2021/01/05 08:28:02 by user42            #+#    #+#             */
+/*   Updated: 2021/01/05 21:42:20 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef ZOMBIEHORDE_HPP
+# define ZOMBIEHORDE_HPP
 
 # include <iostream>
+# include <cstdlib>
+# include "Zombie.hpp"
 
-class Zombie {
+class ZombieHorde {
 	public:
-		Zombie();
-		~Zombie();
-		void settype(std::string type);
-		void setname(std::string name);
+		ZombieHorde(int n, std::string type);
+		~ZombieHorde();
 		void announce() const;
 	private:
-		std::string type;
-		std::string name;
+		std::string	type;
+		Zombie		*horde;
 };
 
 #endif
