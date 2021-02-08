@@ -1,0 +1,32 @@
+total 1,2G
+drwxr-xr-x  25 root root 4,0K janv.  5 08:27 .
+drwxr-xr-x  25 root root 4,0K janv.  5 08:27 ..
+drwxr-xr-x   2 root root 4,0K nov.  23 17:24 bin
+drwxr-xr-x   3 root root 4,0K janv.  6 15:41 boot
+drwxrwxr-x   2 root root 4,0K avril  2  2020 cdrom
+drwxr-xr-x  19 root root 4,1K janv.  7 08:44 dev
+drwxr-xr-x 144 root root  12K janv.  6 15:43 etc
+drwxr-xr-x   3 root root 4,0K avril  6  2020 home
+lrwxrwxrwx   1 root root   32 janv.  5 08:27 initrd.img -> boot/initrd.img-5.4.0-59-generic
+lrwxrwxrwx   1 root root   32 janv.  5 08:27 initrd.img.old -> boot/initrd.img-5.4.0-58-generic
+drwxr-xr-x  22 root root 4,0K déc.  21 12:10 lib
+drwxr-xr-x   2 root root 4,0K déc.  21 12:10 lib32
+drwxr-xr-x   2 root root 4,0K déc.  21 12:10 lib64
+drwx------   2 root root  16K avril  2  2020 lost+found
+drwxr-xr-x   3 root root 4,0K avril  4  2020 media
+drwxr-xr-x   2 root root 4,0K févr.  3  2020 mnt
+drwxr-xr-x   5 root root 4,0K avril  4  2020 opt
+dr-xr-xr-x 228 root root    0 janv.  7 08:44 proc
+drwx------   4 root root 4,0K janv.  7 08:44 root
+drwxr-xr-x  29 root root  960 janv.  7 08:49 run
+drwxr-xr-x   2 root root  12K janv.  7 08:44 sbin
+drwxr-xr-x   2 root root 4,0K avril  2  2020 snap
+drwxr-xr-x   2 root root 4,0K févr.  3  2020 srv
+-rw-------   1 root root 1,2G avril  2  2020 swapfile
+dr-xr-xr-x  13 root root    0 janv.  7 08:44 sys
+drwxrwxrwt  13 root root 4,0K janv.  7 09:41 tmp
+drwxr-xr-x  11 root root 4,0K avril  2  2020 usr
+drwxr-xr-x  15 root root 4,0K avril  4  2020 var
+-rw-------   1 root root    0 janv.  7 08:44 VBox.log
+lrwxrwxrwx   1 root root   29 janv.  5 08:27 vmlinuz -> boot/vmlinuz-5.4.0-59-generic
+lrwxrwxrwx   1 root root   29 janv.  5 08:27 vmlinuz.old -> boot/vmlinuz-5.4.0-58-generic

@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 10:42:39 by user42            #+#    #+#             */
-/*   Updated: 2021/01/05 11:49:51 by user42           ###   ########.fr       */
+/*   Updated: 2021/02/03 23:10:31 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ Zombie::Zombie() {}
 Zombie::~Zombie()
 {
 		std::cout	<< "<" << this->name << " (" << this->type << ")"
-				<< "> DEAD... again..." <<std::endl;
+				<< "> was deleted..." <<std::endl;
 }
 
 void	Zombie::announce() const{
 	
 	std::cout	<< "<" << this->name << " (" << this->type << ")"
-				<< "> Braiiinnnss..." <<std::endl;
+				<< "> rose from the dead..." <<std::endl;
 }
 
 void	Zombie::setname(std::string name)
