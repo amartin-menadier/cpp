@@ -1,4 +1,3 @@
-
 NAME	=	replace
 
 SRC		=	${wildcard *.cpp}

@@ -13,7 +13,6 @@ Fixed::Fixed( const Fixed & src )
 {
 	std::cout << "Copy constructor called" << std::endl;
 	*this = src;
-//	m_rawBits = src.getRawBits();
 }
 
 Fixed::Fixed( const int integer )
@@ -43,19 +42,21 @@ Fixed::~Fixed()
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-Fixed &			Fixed::operator=( Fixed const & rhs )
+Fixed &			Fixed::operator=( Fixed const & src )
 {
-
 	std::cout << "Assignation operator called" << std::endl;
-	m_rawBits = rhs.getRawBits();
-	return *this;
+	if ( this != &src )
+		m_rawBits = src.getRawBits();
+	else
+		std::cout << "Assignation operator failed (self copy)" << std::endl;
+	return (*this);
 }
 
-std::ostream &	operator<<( std::ostream & o, Fixed const & i )
+std::ostream &	operator<<( std::ostream & out, Fixed const & i )
 {
-	o << i.toFloat();
+	out << i.toFloat();
 
-	return o;
+	return (out);
 }
 
 

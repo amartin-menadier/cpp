@@ -19,8 +19,8 @@ class Fixed
 		void setRawBits( int const raw );
 
 	private:
-		int	m_value;
-		const static int bits_count = 8;
+		int					m_rawBits;
+		const static int	m_bits_count = 8;
 
 };
 
