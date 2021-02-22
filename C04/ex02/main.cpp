@@ -1,5 +1,3 @@
-// clang++ *.cpp -Werror -Wall -Wextra -std=c++98 -fsanitize=address && ./a.out && rm ./a.out
-
 #include "Squad.hpp"
 #include "TacticalMarine.hpp"
 #include "AssaultTerminator.hpp"

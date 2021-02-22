@@ -1,4 +1,4 @@
-// clang++ *.cpp -Werror -Wall -Wextra -std=c++98 -fsanitize=address && ./a.out && rm ./a.out
+// clang++ *.cpp -Werror -Wall -Wextra -std=c++98  && ./a.out && rm ./a.out
 #include "Sorcerer.hpp"
 #include "Victim.hpp"
 #include "Peon.hpp"

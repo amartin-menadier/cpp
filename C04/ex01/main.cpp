@@ -1,4 +1,3 @@
-// clang++ *.cpp -Werror -Wall -Wextra -std=c++98 -fsanitize=address && ./a.out && rm ./a.out
 #include "AWeapon.hpp"
 #include "Enemy.hpp"
 #include "PlasmaRifle.hpp"

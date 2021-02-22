@@ -31,4 +31,5 @@ class Squad : public ISquad
 		int				_armySize;
 		ISpaceMarine	**_army;
 };
+
 #endif /* *********************************************************** SQUAD_H */
