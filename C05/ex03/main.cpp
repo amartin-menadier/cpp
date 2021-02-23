@@ -4,7 +4,7 @@
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
-
+#include "Intern.hpp"
 // ShrubberyCreationForm (Required grades: sign 145, exec 137). Action: Create a file called <target>_shrubbery, and write ASCII trees inside it, in the current directory.
 // RobotomyRequestForm (Required grades: sign 72, exec 45). Action: Makes some drilling noises, and tell us that <target> has been robotomized successfully 50% of the time. Otherwise, tell us it’s a failure.
 // PresidentialPardonForm (Required grades: sign 25, exec 5). Action: Tells us <target> has been pardoned by Zafod Beeblebrox.
@@ -16,13 +16,31 @@ int main()
 	Bureaucrat					Alex("Alexandre Benalla", 50);
 	Bureaucrat					Manu("Manu", 1);
 	Bureaucrat					Christine("Christine Boutin", 140);
-	PresidentialPardonForm		Pardon("Nicolas Sarkozy");
+
+	Intern 						someRandomIntern;
+	Form* 						rrf;
+
+	std::cout << "-- makeForm function tests --" << std::endl;
+	rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+	delete rrf;
+	rrf = someRandomIntern.makeForm("shrubbery creation", "Bender");
+	delete rrf;
+
+
+	std::cout << std::endl << "-- makeForm invalid form function tests --" << std::endl;
+	rrf = someRandomIntern.makeForm("invalid form", "Bender"); // shall not work
+
+	std::cout << std::endl;
+
 	RobotomyRequestForm			Bipbop("Jean Castex");
 	ShrubberyCreationForm		Forest("Elysee_Palace_garden");
 
+	rrf = someRandomIntern.makeForm("presidential pardon", "Nicolas Sarkozy");
+
+
 	try
 	{
-		Eva.signForm(Pardon);//shall work
+		Eva.signForm(*rrf);//shall work
 	}
 	catch (std::exception & e)
 	{
@@ -30,7 +48,7 @@ int main()
 	}
 	try
 	{
-		Manu.executeForm(Pardon);//shall work (already signed)
+		Manu.executeForm(*rrf);//shall work (already signed)
 	}
 	catch (std::exception & e)
 	{
@@ -90,5 +108,6 @@ int main()
 	}	
 	
 	std::cout << std::endl << std::endl << "--EOF--" << std::endl;
+	delete rrf;
 	return (0);
 }

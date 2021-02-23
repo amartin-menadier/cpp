@@ -1,4 +1,4 @@
-//   clang++ *.cpp -Werror -Wall -Wextra -std=c++98  && ./a.out && rm ./a.out  
+//   clang++ *.cpp -Werror -Wall -Wextra && ./a.out && rm ./a.out  
 
 #include "Bureaucrat.hpp"
 
