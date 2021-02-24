@@ -60,6 +60,7 @@ void	ClapTrap::meleeAttack(std::string const & target)
 void	ClapTrap::takeDamage(unsigned int amount)
 {
 	std::cout << "CL4P-TP " << m_name << " takes " << amount << " points of damage!" << std::endl;
+	amount -= m_armorDamageReduction;
 	if (amount > m_hitPoints)
 		amount = m_hitPoints;
 	m_hitPoints -= amount;	

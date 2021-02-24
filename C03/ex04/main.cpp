@@ -16,7 +16,7 @@ int		main()
 	ScavTrap Messenger("Messenger");
 	NinjaTrap Ninja("Hattori Hanzo");
 	NinjaTrap Ninja2("Ishikawa Goemon");
-	std::cout << "-- Creating Superman --  " << std::endl;
+	std::cout << std::endl << "-- Creating Superman --  " << std::endl;
 	SuperTrap Superman("Superman");
 
 	std::cout << std::endl << "-- SuperTrap stats--  " << std::endl;
