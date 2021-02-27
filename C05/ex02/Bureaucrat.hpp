@@ -26,7 +26,7 @@ class Bureaucrat
 		void				promotion();
 		void				demotion();
 		void				signForm(Form &form) const;
-		void				executeForm(Form &form) const;
+		void				executeForm(Form const &form) const;
 
 		class GradeTooLowException : public std::exception
 		{
