@@ -2,6 +2,7 @@
 # define ARRAY_HPP
 
 #include <exception>
+#include <stdlib.h>
 
 template <typename T>
 class Array {
@@ -38,7 +39,8 @@ Array<T>::Array() {
 
 template<typename T>
 Array<T>::Array(unsigned int n) {
-	_array = new T[n];
+	std::cout << "Array<T>::Array(unsigned int n) called" << std::endl;
+	_array = new T[n]();// "()" initializes to 0 
 	_arraySize = n;
 }
 
@@ -59,7 +61,7 @@ Array<T> &Array<T>::operator=(Array const &other) {
 	{
 		_array = new T[other._arraySize];
 		for (unsigned int i = 0; i < other._arraySize; i++)
-			_array[i] = other.array[i];
+			_array[i] = other._array[i];
 	}
 	_arraySize = other._arraySize;
 	return *this;
@@ -89,7 +91,7 @@ T const &Array<T>::operator[](unsigned int i) const
 template <typename T>
 char const *Array<T>::OutOfBoundException::what() const throw()
 {
-	return "Error: you are trying to a reach an element out of bound";
+	return "Error: you are trying to reach an element out of bound";
 }
 
 #endif
