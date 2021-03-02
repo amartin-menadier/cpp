@@ -22,6 +22,8 @@ int	get_precision(std::string s)
 		ret++;
 		i++;
 	}
+	if (s[i - 1] == 'f')
+		ret--;
 	return (ret);
 }
 
@@ -62,7 +64,7 @@ void convertAFloat(std::string arg)
         std::cout << "Invalid input." << std::endl;
         return;
     }
- 	if (i != d || d < 0 || d > 255)
+ 	if (d < 0 || d > 255)
 		std::cout << "char: impossible" << std::endl;
     else if (isprint(c))
         std::cout << "char: '" << c << "'" << std::endl;
@@ -114,7 +116,7 @@ void convertADouble(std::string arg)
         std::cout << "Invalid input" << std::endl;
         return;
     }
-	if (i != d || d < 0 || d > 255)
+	if (d < 0 || d > 255)
 		std::cout << "char: impossible" << std::endl;
     else if (isprint(c))
         std::cout << "char: '" << c << "'" << std::endl;
@@ -143,7 +145,7 @@ void convertAnInt(std::string arg)
         std::cout << "Invalid input." << std::endl;
         return;
     }
-	if (i != d || d < 0 || d > 255)
+	if (d < 0 || d > 255)
 		std::cout << "char: impossible" << std::endl;
     else if (isprint(c))
         std::cout << "char: '" << c << "'" << std::endl;

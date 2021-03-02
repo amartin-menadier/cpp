@@ -3,7 +3,6 @@
 #include "B.hpp"
 #include "C.hpp"
 
-
 void identify_from_pointer(Base *p)
 {
 	if (dynamic_cast<A*>(p) != NULL)
@@ -16,7 +15,12 @@ void identify_from_pointer(Base *p)
 
 void identify_from_reference(Base &p)
 {
-	identify_from_pointer(&p);
+	if (dynamic_cast<A*>(&p) != NULL)
+		std::cout << "A";
+	else if (dynamic_cast<B*>(&p) != NULL)
+		std::cout << "B";
+	else if (dynamic_cast<C*>(&p) != NULL)
+		std::cout << "C";
 }
 
 Base *generate(void)
@@ -36,11 +40,12 @@ int main()
 	for (int i = 0; i < 5; i++)
 	{
 		Base *gen = generate();
+		Base &genref = *gen;
 		std::cout << "Identify from pointer :   " ;
 		identify_from_pointer(gen);
 		std::cout << std::endl;
 		std::cout << "Identify from reference : " ;
-		identify_from_reference(*gen);
+		identify_from_reference(genref);
 		std::cout << std::endl << std::endl;
 		delete gen;
 	}
