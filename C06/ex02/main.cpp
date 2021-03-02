@@ -2,6 +2,7 @@
 #include "A.hpp"
 #include "B.hpp"
 #include "C.hpp"
+#include <cstdlib>
 
 void identify_from_pointer(Base *p)
 {

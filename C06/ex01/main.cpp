@@ -6,8 +6,7 @@ void * serialize(void)
 		"abcdefghijklmopqrstuvxyz" \
 		"ABCDEFGHIJKLMOPQRSTUVXYZ";
 	static size_t size = alnum.size();
-	/* uint8_t is the same as a byte. */
-	uint8_t *raw = new uint8_t[8 + 4 + 8]; // int = 4 bytes
+	char *raw = new char[8 + 4 + 8]; // char = 1 byte, int = 4 bytes
     for (size_t i = 0; i < 8; i++)
         raw[i] = alnum[rand() % size];
     *reinterpret_cast<int*>(raw + 8) = rand();
@@ -32,7 +31,7 @@ int main()
 	void *raw = serialize();
     Data *data = deserialize(raw);
     std::cout << "s1 = " << data->s1 << ", n = " << data->n << ", s2 = " << data->s2 << std::endl;
-    delete[] reinterpret_cast<uint8_t*>(raw);
+    delete[] reinterpret_cast<char*>(raw);
     delete data;
 	return (0);
 }

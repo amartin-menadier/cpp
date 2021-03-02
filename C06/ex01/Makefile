@@ -2,7 +2,7 @@ NAME = serialize
 
 SRCS = main.cpp
 
-CFLAGS = -Wall -Werror -Wextra 
+CFLAGS = -Wall -Werror -Wextra -std=c++98
 
 BUILD_DIR = obj
 OBJS = $(SRCS:.cpp=.o)
