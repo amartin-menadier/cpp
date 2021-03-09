@@ -55,6 +55,6 @@ int main()
 	{
 		std::cerr << "Error: " << e.what() << std::endl;
 	}
-//	std::cout << sp3;
+	std::cout << sp3 << std::endl;
 	return 0;
 }
